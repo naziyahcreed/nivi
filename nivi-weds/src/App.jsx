@@ -21,6 +21,9 @@ import ShareSection from './components/ShareSection'
 import ThankYou from './components/ThankYou'
 import MusicControl from './components/MusicControl'
 
+import { useLanguage } from './context/LanguageContext'
+import { Ico } from './components/Icons'
+
 const SECTIONS = ['home', 'story', 'events', 'gallery', 'venue']
 
 export default function App() {
@@ -58,6 +61,7 @@ export default function App() {
 
 function Invitation({ reduced, musicOn, onMusic }) {
   const active = useActiveSection(SECTIONS)
+  const { t } = useLanguage()
 
   return (
     <motion.div
@@ -81,8 +85,38 @@ function Invitation({ reduced, musicOn, onMusic }) {
         <ShareSection />
         <ThankYou />
       </main>
-      <footer className="bg-[#2a1b12] px-5 py-5 pb-[calc(5.5rem+env(safe-area-inset-bottom))] text-center text-[10px] tracking-[0.22em] text-[#e8d5a3]">
-        {weddingData.couple.hashtag}
+
+      <footer className="bg-[#1c0f0a] border-t border-[#c4a35a]/30 px-4 pt-8 pb-[calc(6rem+env(safe-area-inset-bottom))] text-center">
+        {/* Hashtag */}
+        <p className="font-cinzel text-xs tracking-[0.25em] text-[#ffd56b] uppercase">
+          {weddingData.couple.hashtag}
+        </p>
+
+        {/* Website Creation / Contact on WhatsApp Only Card */}
+        <div className="mt-5 mx-auto max-w-sm rounded-2xl border border-[#c4a35a]/50 bg-gradient-to-b from-[#2a170e] to-[#180e08] p-4 shadow-2xl text-center">
+          <p className="font-serif text-base font-bold text-[#f4e2b3]">
+            {t('இதேபோல் இணையதளம் வேண்டுமா?', 'Want a website like this?')}
+          </p>
+          <p className="mt-1 text-[11px] text-[#e8d5a3]">
+            {t('வாட்ஸ்அப்பில் மட்டும் தொடர்பு கொள்ளவும்', 'Contact on WhatsApp only')}
+          </p>
+
+          <div className="mt-3">
+            <a
+              href="https://wa.me/91994452690?text=Hi!%20I%20saw%20this%20wedding%20invitation%20website%20and%20want%20a%20similar%20website%20for%20an%20event."
+              target="_blank"
+              rel="noreferrer"
+              className="gold-btn inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold tracking-wider shadow-lg hover:scale-105 transition-transform cursor-pointer"
+            >
+              <Ico.wa className="h-4 w-4 text-[#25d366]" />
+              <span>9944-52690</span>
+            </a>
+          </div>
+        </div>
+
+        <p className="mt-6 text-[10px] tracking-[0.2em] text-[#a8927a]/70 uppercase">
+          With Love • {weddingData.couple.brideName} & {weddingData.couple.groomName}
+        </p>
       </footer>
     </motion.div>
   )

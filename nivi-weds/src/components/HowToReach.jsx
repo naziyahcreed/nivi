@@ -53,8 +53,8 @@ export default function HowToReach() {
 function Row({ label, value }) {
   return (
     <div className="mb-4">
-      <p className="font-cinzel text-[10px] tracking-[0.2em] text-[#8b6914] uppercase">{label}</p>
-      <p className="mt-1 font-serif text-base text-[#5c3d2e]">{value}</p>
+      <p className="font-cinzel text-[10px] tracking-[0.2em] text-[#ffd56b] font-bold uppercase">{label}</p>
+      <p className="mt-1 font-serif text-base text-[#f4e2b3]">{value}</p>
     </div>
   )
 }

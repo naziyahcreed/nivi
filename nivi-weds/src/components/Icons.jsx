@@ -51,6 +51,12 @@ export const Ico = {
       <path d="M8 3.5v3M16 3.5v3M3.5 10h17M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
     </svg>
   ),
+  calendar: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...p}>
+      <rect x="3.5" y="5" width="17" height="15" rx="2" />
+      <path d="M8 3.5v3M16 3.5v3M3.5 10h17M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
+    </svg>
+  ),
   pin: (p) => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...p}>
       <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />

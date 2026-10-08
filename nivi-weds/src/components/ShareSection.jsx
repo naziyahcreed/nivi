@@ -55,8 +55,8 @@ export default function ShareSection() {
               <Ico.share className="h-4 w-4" /> {t('பகிர்', 'Share')}
             </button>
           </div>
-          <img src={qr} alt="QR code" className="mx-auto mt-6 h-36 w-36 rounded-xl border border-[#c4a35a]/40 bg-white p-2" />
-          <p className="mt-3 text-xs text-[#7a5c45]">{t('ஸ்கேன் செய்து அழைப்பிதழைத் திறக்கவும்', 'Scan to open the invitation')}</p>
+          <img src={qr} alt="QR code" className="mx-auto mt-6 h-36 w-36 rounded-2xl border-2 border-[#ffd56b]/60 bg-white p-2.5 shadow-xl" />
+          <p className="mt-3.5 text-xs text-[#e8d5a3] font-medium">{t('ஸ்கேன் செய்து அழைப்பிதழைத் திறக்கவும்', 'Scan to open the invitation')}</p>
         </div>
       </Reveal>
     </section>

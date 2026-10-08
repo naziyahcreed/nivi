@@ -18,14 +18,14 @@ export default function FamilyBlessings() {
           <Reveal key={side.labelEnglish} delay={i * 0.1}>
             <article className="gold-card rounded-[24px] px-5 py-7 text-center">
               <GoldCorners />
-              <h3 className="font-cinzel text-sm tracking-[0.12em] text-[#8b6914] uppercase break-words">
+              <h3 className="font-cinzel text-sm font-bold tracking-[0.15em] text-[#ffd56b] uppercase break-words">
                 {t(side.labelTamil, side.labelEnglish)}
               </h3>
-              <p className="mt-3 font-serif text-[1.05rem] leading-relaxed break-words text-[#5c3d2e]">
-                {t(side.messageTamil, side.messageEnglish)}
+              <p className="mt-3 font-serif text-[1.08rem] leading-relaxed break-words text-[#f7f0e1] italic">
+                “{t(side.messageTamil, side.messageEnglish)}”
               </p>
               <div className="mt-4 flex justify-center">
-                <Lotus className="h-10 w-10" />
+                <Lotus className="h-10 w-10 text-[#c4a35a]" />
               </div>
             </article>
           </Reveal>

@@ -55,9 +55,10 @@ body {
   background-color: var(--bg-emerald-deep);
   color: var(--text-dark);
   font-family: var(--font-sans);
-  line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 /* Subtle Animated Gold Dust Particles on Canvas */

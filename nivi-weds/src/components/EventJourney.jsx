@@ -23,16 +23,16 @@ export default function EventJourney() {
             <span className="absolute left-[6px] top-7 z-10 h-4 w-4 rounded-full border-4 border-[#f7f0e1] bg-[#c4a35a]" />
             <article className="gold-card rounded-2xl p-4">
               <GoldCorners />
-              <p className="font-cinzel text-[10px] tracking-[0.22em] text-[#b8923a] uppercase">
+              <p className="font-cinzel text-[10px] tracking-[0.22em] text-[#ffd56b] font-bold uppercase">
                 {t(ev.titleTamil, ev.title)}
               </p>
-              <h3 className="mt-1 font-serif text-[clamp(1rem,4.5vw,1.125rem)] leading-snug break-words text-[#5c3d2e]">
+              <h3 className="mt-1 font-serif text-[clamp(1rem,4.5vw,1.18rem)] font-bold leading-snug break-words text-[#f4e2b3]">
                 {t(ev.displayDateTamil, ev.displayDateEnglish)}
               </h3>
-              <p className="text-xs leading-snug text-[#7a5c45]">
+              <p className="mt-1 text-xs leading-snug text-[#e8d5a3] font-medium">
                 {t(ev.timeDisplayTamil, ev.timeDisplayEnglish)} · {t(ev.venueTamil, ev.venueEnglish)}
               </p>
-              <p className="text-xs leading-snug text-[#7a5c45]">{t(ev.addressTamil, ev.addressEnglish)}</p>
+              <p className="mt-0.5 text-xs leading-snug text-[#d9c7a6]">{t(ev.addressTamil, ev.addressEnglish)}</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <a
                   href={buildGoogleCalendarUrl(ev, names)}

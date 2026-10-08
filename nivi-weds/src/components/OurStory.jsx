@@ -18,8 +18,8 @@ export default function OurStory() {
         {story.milestones.map((m, i) => (
           <Reveal key={m.year} delay={i * 0.08} className="relative z-10 min-w-0 text-center">
             {m.heart ? (
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#c4a35a] bg-[#fffdf8] shadow">
-                <Lotus className="h-7 w-7" />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#ffd56b] bg-gradient-to-b from-[#2e1b12] to-[#1c0f0a] shadow-md">
+                <Lotus className="h-7 w-7 text-[#f4e2b3]" />
               </div>
             ) : (
               <div className="mx-auto h-16 w-16 overflow-hidden rounded-full border-2 border-[#c4a35a]/70 shadow">

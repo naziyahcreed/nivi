@@ -20,10 +20,10 @@ export default function MapsSection() {
               <GoldCorners />
               <div className="flex items-center justify-between px-4 pb-2 pt-4">
                 <div>
-                  <p className="font-cinzel text-[10px] tracking-[0.16em] text-[#8b6914] uppercase">
+                  <p className="font-cinzel text-[10px] tracking-[0.16em] text-[#ffd56b] font-bold uppercase">
                     {t(v.eventsTamil, v.eventsEnglish)}
                   </p>
-                  <h3 className="font-serif text-lg text-[#5c3d2e]">{t(v.nameTamil, v.nameEnglish)}</h3>
+                  <h3 className="font-serif text-lg font-bold text-[#f4e2b3]">{t(v.nameTamil, v.nameEnglish)}</h3>
                 </div>
                 <a
                   href={v.mapsUrl}
