@@ -129,6 +129,147 @@
   color: transparent;
 }
 
+.royal-gold-text {
+  background: linear-gradient(
+    135deg,
+    #cf9f41 0%,
+    #fbedb8 20%,
+    #ffffff 38%,
+    #ffd56b 50%,
+    #c49a38 68%,
+    #ffe7a3 82%,
+    #b88928 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 5s ease-in-out infinite;
+}
+
+/* Animated Running Golden Border */
+@keyframes spinConic {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gold-running-border {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  padding: 2px;
+  background: rgba(40, 24, 16, 0.6);
+  box-shadow:
+    0 0 30px rgba(255, 213, 107, 0.35),
+    0 16px 40px rgba(0, 0, 0, 0.75);
+}
+
+.gold-running-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(196, 163, 90, 0.05) 0deg,
+    rgba(255, 215, 107, 0.3) 50deg,
+    #ffd56b 85deg,
+    #ffffff 100deg,
+    #ffd56b 115deg,
+    rgba(212, 175, 106, 0.4) 140deg,
+    transparent 180deg,
+    rgba(196, 163, 90, 0.1) 230deg,
+    #ffd56b 265deg,
+    #ffffff 280deg,
+    #ffd56b 295deg,
+    rgba(212, 175, 106, 0.4) 320deg,
+    transparent 360deg
+  );
+  animation: spinConic 5s linear infinite;
+  pointer-events: none;
+}
+
+.gold-running-border-inner {
+  position: relative;
+  z-index: 1;
+  border-radius: calc(1.25rem - 2px);
+  background: linear-gradient(180deg, rgba(32, 18, 12, 0.94) 0%, rgba(18, 9, 5, 0.96) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@keyframes goldLightSweep {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.95;
+  }
+  75% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.gold-light-sheen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 245, 200, 0.65) 50%,
+    rgba(255, 255, 255, 0.1) 75%,
+    transparent 100%
+  );
+  animation: goldLightSweep 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes goldAuraPulse {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.85;
+  }
+}
+
+.gold-aura-halo {
+  background: radial-gradient(circle at center, rgba(255, 220, 120, 0.45) 0%, rgba(212, 175, 106, 0.25) 45%, rgba(139, 105, 20, 0.05) 70%, transparent 85%);
+  animation: goldAuraPulse 3s ease-in-out infinite;
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    transform: scale(0.5) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px #ffd56b);
+  }
+}
+
+.gold-sparkle {
+  animation: sparkleTwinkle 2.5s ease-in-out infinite;
+}
+
 /* ---------- cards & frames ---------- */
 /* ---------- cards & frames ---------- */
 .gold-card {

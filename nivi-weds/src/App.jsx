@@ -38,15 +38,18 @@ export default function App() {
     setDoors(true)
     setMusicOn(true)
     musicRef.current?.start()
-    window.setTimeout(() => setDoors(false), reduced ? 200 : 1500)
+    if (reduced) {
+      setDoors(false)
+    }
   }
 
   return (
-    <div className="phone-shell">
-      {!opened ? <OpeningScreen onOpen={handleOpen} /> : null}
-      <DoorReveal active={doors && opened} />
-      <PetalCanvas active={opened} />
-      <MusicControl ref={musicRef} on={musicOn} />
+    <>
+      <DoorReveal active={doors && opened} onComplete={() => setDoors(false)} />
+      <div className="phone-shell">
+        {!opened ? <OpeningScreen onOpen={handleOpen} /> : null}
+        <PetalCanvas active={opened} />
+        <MusicControl ref={musicRef} on={musicOn} />
 
       {opened ? (
         <Invitation
@@ -55,7 +58,8 @@ export default function App() {
           onMusic={() => setMusicOn((v) => !v)}
         />
       ) : null}
-    </div>
+      </div>
+    </>
   )
 }
 
@@ -103,13 +107,13 @@ function Invitation({ reduced, musicOn, onMusic }) {
 
           <div className="mt-3">
             <a
-              href="https://wa.me/91994452690?text=Hi!%20I%20saw%20this%20wedding%20invitation%20website%20and%20want%20a%20similar%20website%20for%20an%20event."
+              href="https://wa.me/919944052690?text=Hi!%20I%20saw%20this%20wedding%20invitation%20website%20and%20want%20a%20similar%20website%20for%20an%20event."
               target="_blank"
               rel="noreferrer"
               className="gold-btn inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold tracking-wider shadow-lg hover:scale-105 transition-transform cursor-pointer"
             >
               <Ico.wa className="h-4 w-4 text-[#25d366]" />
-              <span>9944-52690</span>
+              <span>9944052690</span>
             </a>
           </div>
         </div>
